@@ -1,7 +1,5 @@
 # AMS_Airbnb_Pricing
-
-## Overview
-This project is a web application using Node.js with Express.js and MySQL as the database.
+This project focuses on database implementation for analyzing Airbnb pricing in Amsterdam. It involves building an ER model for the data structure, implementing a relational database in MySQL, and inserting data. The web application simply displays data related to research questions using SQL queries to retrieve the data.
 
 ## Installation
 
