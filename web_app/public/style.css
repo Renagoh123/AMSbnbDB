@@ -1,0 +1,19 @@
+body { font-family: Arial, sans-serif; }
+p, ul {font-size: larger;}
+.q1, .q2, .q3, .q3a, .q3b, .q3c, .chart-container { margin: 20px; }
+
+.header { padding: 30px; text-align: center; background:#333333; color: white; }
+
+/* Adjust the size of the canvas container */
+.chart-container {
+    width: 80%;
+    height: 400px;
+    margin: auto;
+}
+
+/* Styling the table*/
+table { border-collapse: collapse; border: 1px solid #ddd; margin:auto;}
+th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+th { background-color: #f2f2f2; font-weight: bold; }
+.highlight { background-color: #f2f2f2; font-weight: bold; }
+.max-score { margin-top: 10px; font-weight: bold; text-align: center; }

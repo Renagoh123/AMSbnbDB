@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Airbnb Listings in Amsterdam</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Amsterdam Airbnb Pricing Dataset Analysis</h1>
+    </div>
+   
+    <!-- Research Question 1 -->
+    <div class="q1">
+    <h2>1) Total Airbnb Listings in Amsterdam: {{totalListings}} Listings</h2>
+        <ul>
+            {{#roomType}}
+            <li>{{room_type}}: {{count}} listings</li>
+            {{/roomType}}
+        </ul>
+    </div>
+
+    <!-- Research Question 2 -->
+    <div class="q2">
+    <h2>2) Average Pricing of Listings Managed by Superhost vs. Non-superhost listings</h2> 
+        <ul>
+            <li>Average prices for Superhost: {{superhostAvgPrice}}</li>
+            <li>Average prices for Non-superhost: {{nonSuperhostAvgPrice}}</li>
+        </ul>
+    </div>
+
+    <!-- Research Question 3 -->
+    <div class="q3">
+        <h2>3) Factors Influencing Guest Overall Satisfaction in Amsterdam's Airbnb Market</h2>
+        <p>Sub-questions for clarity include:</p>
+        <!-- Subquery 1 -->
+        <div class="q3a">
+            <h2>a. Guest Satisfaction Overall for Superhost vs. Non-superhost Listings</h2>
+            <div class="chart-container">
+                <canvas id="satisfactionByHostChart"></canvas>
+            </div>
+        </div>
+           
+        <!-- Subquery 2 -->
+        <div class="q3b">
+            <h2>b. Guest Satisfaction Overall for Person Capacity of Listings</h2>
+            <p>The average guest satisfaction scores for different listing capacities</p>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Listing Capacity</th>
+                            <th>Average Guest Satisfaction Score</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#capacitySatisfaction}}
+                        <tr>
+                            <td>{{capacity}} Persons</td>
+                            <td>{{avgScore}}</td>
+                        </tr>
+                        {{/capacitySatisfaction}}
+                    </tbody>
+                </table>
+            </div>
+            <p class="max-score"> The highest average guest satisfaction score: {{maxSatisfactionByCapcity.avgScore}} for listings with a capacity of {{maxSatisfactionByCapcity.capacity}} people.</p>
+        </div>
+
+        <!-- Subquery 3 -->
+        <div class="q3c">
+            <h2>c. Guest Satisfaction Trend Correlated with Pricing Differences on Weekdays vs. Weekends</h2>
+            <div class="chart-container">
+                <canvas id="pricingSatisfactionChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        const superhostSatisfaction = {{superhostSatisfaction}};
+        const nonSuperhostSatisfaction = {{nonSuperhostSatisfaction}};
+        const ratingCategories = {{{ratingCategories}}};
+        const weekdays = {{{weekdays}}};
+        const weekends = {{{weekends}}};
+
+    </script>
+    <script src="/chart.js"></script>
+
+</body>
+
+</html>
