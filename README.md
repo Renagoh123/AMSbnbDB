@@ -1,4 +1,4 @@
-# Airbnb Pricing Analysis for Amsterdam
+# Amsterdam Airbnb Pricing Data Implementation and Analysis
 This project focuses on database implementation for analyzing Airbnb pricing in Amsterdam. It involves building an ER model for the data structure, implementing a relational database in MySQL, and inserting data. The web application simply displays data related to research questions using SQL queries to retrieve the data.
 
 ## Installation
